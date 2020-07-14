@@ -16,3 +16,71 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+
+Combox:
+String[] petStrings = { "Table Tennis", "Foosball", "Netball", "Soccer", "Rugby", "Cricket", “Swimming”, "Volleyball"};
+
+//Create the combo box, select item at index 8.
+//Indices start at 0, so 8 specifies the pig.
+JComboBox petList = new JComboBox(petStrings);
+petList.setSelectedIndex(8);
+petList.addActionListener(this);
+
+Progress Bar:
+//Where member variables are declared:
+JProgressBar progressBar;…
+//Where the GUI is constructed:
+progressBar = new JProgressBar(0, task.getLengthOfTask());
+progressBar.setValue(0);
+progressBar.setStringPainted(true);
+if (/*…half way done…*/)
+    progressBar.setString(“Half way there!”);
+public void actionPerformed(ActionEvent evt) {
+    startButton.setEnabled(false);
+    setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+    done = false;
+    task = new Task();
+    task.addPropertyChangeListener(this);
+    task.execute();
+}
+
+Radio buttons:
+//In initialization code:
+    //Create the radio buttons.
+    JRadioButton 7-13Button = new JRadioButton(7-13);
+    7-13Button.setMnemonic(KeyEvent.VK_B);
+    7-13Button.setActionCommand(7-13);
+    7-13Button.setSelected(true);
+
+    JRadioButton 14-17Button = new JRadioButton(14-17);
+    14-17Button .setMnemonic(KeyEvent.VK_C);
+    14-17Button.setActionCommand(14-17);
+
+    JRadioButton 18-25Button = new JRadioButton(18-25);
+    18-25Button.setMnemonic(KeyEvent.VK_D);
+    18-25Button.setActionCommand(18-25);
+
+    JRadioButton 26-40Button = new JRadioButton(26-40);
+    26-40Button.setMnemonic(KeyEvent.VK_R);
+    26-40Button.setActionCommand(26-40);
+
+    //Group the radio buttons.
+    ButtonGroup group = new ButtonGroup();
+    Group.add(7-13);
+    Group.add(14-17);
+    Group.add(18-25);
+    Group.add(26-40);
+
+
+   
+
+ //Register a listener for the radio buttons.
+    7-13Button.addActionListener(this);
+    14-17Button.addActionListener(this);
+    18-25Button.addActionListener(this);
+    26-40Button.addActionListener(this);
+…
+Public void actionPerformed(ActionEvent e) {
+
+}
+
